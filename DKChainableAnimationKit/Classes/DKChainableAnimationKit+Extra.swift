@@ -13,8 +13,8 @@ public extension DKChainableAnimationKit {
     public func makeOpacity(_ opacity: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let opacityAnimation = self.basicAnimationForKeyPath("opacity")
-            opacityAnimation.fromValue = view.alpha as AnyObject!
-            opacityAnimation.toValue = opacity as AnyObject!
+            opacityAnimation.fromValue = view.alpha as AnyObject
+            opacityAnimation.toValue = opacity as AnyObject
             self.addAnimationFromCalculationBlock(opacityAnimation)
         }
 
@@ -60,8 +60,8 @@ public extension DKChainableAnimationKit {
         let width = max(0, width)
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let borderColorAnimation = self.basicAnimationForKeyPath("borderWidth")
-            borderColorAnimation.fromValue = view.layer.borderWidth as AnyObject!
-            borderColorAnimation.toValue = width as AnyObject!
+            borderColorAnimation.fromValue = view.layer.borderWidth as AnyObject
+            borderColorAnimation.toValue = width as AnyObject
             self.addAnimationFromCalculationBlock(borderColorAnimation)
         }
 
@@ -75,8 +75,8 @@ public extension DKChainableAnimationKit {
         let cornerRadius = max(0, cornerRadius)
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let cornerRadiusAnimation = self.basicAnimationForKeyPath("cornerRadius")
-            cornerRadiusAnimation.fromValue = view.layer.cornerRadius as AnyObject!
-            cornerRadiusAnimation.toValue = cornerRadius as AnyObject!
+            cornerRadiusAnimation.fromValue = view.layer.cornerRadius as AnyObject
+            cornerRadiusAnimation.toValue = cornerRadius as AnyObject
             self.addAnimationFromCalculationBlock(cornerRadiusAnimation)
         }
 

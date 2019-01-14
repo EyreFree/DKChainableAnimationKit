@@ -81,8 +81,8 @@ public extension DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position.x")
             let newPosition = self.newPositionFrom(newOrigin: CGPoint(x: x, y: view.layer.frame.origin.y))
-            positionAnimation.fromValue = view.layer.position.x as AnyObject!
-            positionAnimation.toValue = newPosition.x as AnyObject!
+            positionAnimation.fromValue = view.layer.position.x as AnyObject
+            positionAnimation.toValue = newPosition.x as AnyObject
             self.addAnimationFromCalculationBlock(positionAnimation)
         }
 
@@ -97,8 +97,8 @@ public extension DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position.y")
             let newPosition = self.newPositionFrom(newOrigin: CGPoint(x: view.layer.frame.origin.x, y: y))
-            positionAnimation.fromValue = view.layer.position.y as AnyObject!
-            positionAnimation.toValue = newPosition.y as AnyObject!
+            positionAnimation.fromValue = view.layer.position.y as AnyObject
+            positionAnimation.toValue = newPosition.y as AnyObject
             self.addAnimationFromCalculationBlock(positionAnimation)
         }
 
@@ -185,8 +185,8 @@ public extension DKChainableAnimationKit {
     public func moveX(_ x: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position.x")
-            positionAnimation.fromValue = view.layer.position.x as AnyObject!
-            positionAnimation.toValue = (view.layer.position.x + x) as AnyObject!
+            positionAnimation.fromValue = view.layer.position.x as AnyObject
+            positionAnimation.toValue = (view.layer.position.x + x) as AnyObject
             self.addAnimationFromCalculationBlock(positionAnimation)
         }
 
@@ -201,8 +201,8 @@ public extension DKChainableAnimationKit {
     public func moveY(_ y: CGFloat) -> DKChainableAnimationKit {
         self.addAnimationCalculationAction { (view: UIView) -> Void in
             let positionAnimation = self.basicAnimationForKeyPath("position.y")
-            positionAnimation.fromValue = view.layer.position.y as AnyObject!
-            positionAnimation.toValue = (view.layer.position.y + y) as AnyObject!
+            positionAnimation.fromValue = view.layer.position.y as AnyObject
+            positionAnimation.toValue = (view.layer.position.y + y) as AnyObject
             self.addAnimationFromCalculationBlock(positionAnimation)
         }
 
